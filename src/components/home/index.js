@@ -85,6 +85,11 @@ export default class Home extends Component {
     this.getImage();
   }
 
+  // android 退出后存在缓存，需要把page置为1
+  componentWillUnmount(){
+    page = 1;
+  }
+
   //加载等待页
   renderLoadingView() {
     return (
